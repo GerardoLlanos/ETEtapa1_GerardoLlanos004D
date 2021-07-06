@@ -1,0 +1,1384 @@
+
+/*================= Estilos generales =================*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.titulo{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.hr-text {
+    line-height: 1em;
+    position: relative;
+    outline: 0;
+    border: 0;
+    color: black;
+    text-align: center;
+    height: 1.5em;
+    opacity: .7 ;
+}
+
+.hr-text:before {
+    content: '';
+    background: linear-gradient(to right, transparent, #000000, transparent);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+}
+.hr-text:after {
+      content: attr(data-content);
+      position: relative;
+      display: inline-block;
+      color: black;
+  
+      padding: 0 .5em;
+      line-height: 1.5em;
+      color: #000000;
+      background-color: #fcfcfa;
+}
+
+
+/*================= INICIO NAVBAR =================*/
+
+
+.navbar {
+    text-transform: uppercase;
+    box-shadow: 0 1.6px 1.6px rgb(162, 164, 167);
+}
+
+.navbar-brand img{
+    width: 60px;
+    height: 60px;
+}
+
+/* Todos los elementos que tengan la clase active dentro de la clase navbar main tendrar eso */
+.navbar-main .active{
+    text-decoration: underline wavy;
+    text-underline-offset: 9px;
+}
+
+
+
+/*================= FIN NAVBAR =================*/
+
+
+
+                    /*================= INICIO INDEX =================*/
+
+
+/* INICIO HERO IMG */
+
+.hero-img {
+    background: url(../img/heroimg.jpg)fixed center/cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 65vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.hero-img::before {
+   content : "";
+   background : rgba(54, 54, 54, 0.603); 
+   display : block;
+   position : absolute;
+   width : 100%;
+   height : 100%;
+   opacity : 0.9; 
+}
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+  }
+
+
+  /* FIN HERO IMG */
+
+/*================= INICIO RIBBON =================*/
+
+#ribbon{
+    background-color: rgb(248, 248, 248);
+    background-image: repeating-linear-gradient(45deg,transparent,transparent 25px,rgb(255, 255, 255) 25px,rgb(255, 255, 255) 40px) 
+}
+
+#ribbon::after{
+    content: '';
+    background-color: transparent;
+    display: block;
+    height: 20px;
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+    left: auto;
+    margin-top: -40px ;        
+}
+
+#tarjeta{
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    margin-top: -20px;
+    z-index: 10;
+    box-shadow: 0 0 10px rgb(187, 185, 187);
+}
+
+.textshadow{
+    text-shadow: 0 6px 6px rgb(0, 0, 0)
+}
+
+.titulo-ribbon{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.parrafo-ribbon{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+.ribbon-imagen{
+        width: 100%;
+        height: 100%;
+}
+
+
+/*================= FIN RIBBON =================*/
+
+
+/*================= INICIO NOTICIAS =================*/
+
+.noticia{
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.noticia-item{
+    width: inherit;
+    height: inherit;    
+}
+
+
+.noticia-item img{
+    width: 100%;
+    height: 97%;
+    object-fit: cover;
+    
+}
+.zoom-img{
+    transition: transform .2s; /* Animation */
+}
+
+.noticia-item-text{ 
+    max-width: 100%;
+    padding: 2rem;
+    top: initial;
+    bottom: 18px;
+    transform: initial;
+    max-width: 100%;
+    position: absolute;
+    background-color: rgba(37, 37, 37, 0.7);
+    color: #fff;
+    
+}
+
+
+.noticia-item-text h5{
+    font-size: 23px;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+
+.noticia-item-text p{
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+    
+}
+
+.zoom-img:hover{
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 2000px){
+    .noticia-item-text p{
+        font-size: 20px;
+    }
+    .noticia-item-text h5{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .noticia-item-text p{
+        font-size: 15px;
+    }
+    .noticia-item-text h5{
+        font-size: 20px;
+    }
+    .noticia-item img{
+        width: 170%;
+        height: 97%;
+        object-fit: cover;
+        
+    }
+}
+
+@media screen and (max-width: 350px){
+    .noticia-item-text p{
+        font-size: 12px;
+    }
+    .noticia-item-text h5{
+        font-size: 18px;
+    }
+}
+
+
+
+/*================= FIN NOTICIAS =================*/
+
+
+
+                    /*================= INICIO NOTICIAS DESTACADAS  =================*/
+
+/* CARDS 1 */
+
+.news-cards-1 h4 {
+    margin: 20px 0;
+}
+
+
+.news-cards-1{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin: 10px 0;
+
+}
+
+.news-cards-1 img {
+    width: 100%;
+    height: 300px;
+    object-fit: scale-down;
+}
+
+.news-cards-1 a {
+    color: #359cb2;
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.news-cards-1 a:hover {
+    text-decoration: underline;
+    color: #0b7a8f;
+}
+
+@media screen and (max-width:1200px){
+    .news-cards-1 h4 {
+        margin: 0px;
+        margin-bottom: 5px;
+        font-size: 22px;
+    }
+
+    .news-cards-1 a {
+        font-size: 17px;
+    }
+
+    .news-cards-1 p {
+        font-size: 17px;
+    }
+
+    .news-cards-1 img {
+        height: 200px;
+    }
+}
+
+@media screen and (max-width:600px){
+    .news-cards-1 h4 {
+        margin: 0px;
+        margin-bottom: 5px;
+        font-size: 20px;
+    }
+
+    .news-cards-1 a {
+        font-size: 15px;
+    }
+
+    .news-cards-1 p {
+        font-size: 15px;
+    }
+
+    .news-cards-1 img {
+        height: 150px;
+    }
+}
+
+@media screen and (max-width:500px){
+
+    .news-cards-1 h4 {
+        margin: 0px;
+        margin-bottom: 5px;
+        font-size: 18px;
+    }
+
+    .news-cards-1 a {
+        font-size: 15px;
+    }
+
+    .news-cards-1 p {
+        font-size: 15px;
+    }
+
+    .news-cards-1 img {
+        height: 150px;
+    }
+
+}
+
+
+@media screen and (max-width:400px){
+    .news-cards-1 h4 {
+        margin: 0px;
+        margin-bottom: 5px;
+        font-size: 16px;
+    }
+
+    .news-cards-1 a {
+        font-size: 13px;
+    }
+
+    .news-cards-1 p {
+        font-size: 13px;
+    }
+
+}
+
+@media screen and (max-width:300px){
+
+    .news-cards-1 h4 {
+        margin: 0px;
+        margin-bottom: 5px;
+        font-size: 15px;
+    }
+
+    .news-cards-1 a {
+        font-size: 10px;
+    }
+
+    .news-cards-1 p {
+        font-size: 10px;
+    }
+
+}
+
+
+
+/* CARDS 2 */
+
+.news-cards-2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin: 10px 0;
+
+}
+
+.news-cards-2 img {
+    width: 100%;
+    height: 300px;
+    object-fit: scale-down;
+}
+
+.news-cards-2 h3 {
+    font-size: 20px;
+}
+
+.news-cards-2 a {
+    color: #359cb2;
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.news-cards-2 a:hover {
+    text-decoration: underline;
+    color: #0b7a8f;
+}
+
+@media screen and (max-width:1200px){
+    .news-cards-2 img {
+        height: 250px;
+    }
+    
+    .news-cards-2 h3 {
+        font-size: 22px;
+    }
+    
+    .news-cards-2 a {
+        font-size: 17px;
+    }
+
+    .news-cards-2 p {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width:800px){
+    .news-cards-2 img {
+        height: 200px;
+    }
+    
+    .news-cards-2 h3 {
+        font-size: 20px;
+    }
+    
+    .news-cards-2 a {
+        font-size: 15px;
+    }
+
+    .news-cards-2 p {
+        font-size: 15px;
+    }
+}
+
+
+@media screen and (max-width:500px){
+
+    .news-cards-2 img {
+        height: 200px;
+    }
+    
+    .news-cards-2 h3 {
+        font-size: 18px;
+    }
+    
+    .news-cards-2 a {
+        font-size: 15px;
+    }
+
+    .news-cards-2 p {
+        font-size: 15px;
+    }
+
+}
+
+
+@media screen and (max-width:400px){
+    .news-cards-2 img {
+        height: 100px;
+    }
+    
+    .news-cards-2 h3 {
+        font-size: 18px;
+    }
+    
+    .news-cards-2 a {
+        font-size: 15px;
+    }
+
+    .news-cards-2 p {
+        font-size: 15px;
+    }
+
+}
+
+@media screen and (max-width:300px){
+    .news-cards-2 img {
+        height: 100px;
+    }
+    
+    .news-cards-2 h3 {
+        font-size: 15px;
+    }
+    
+    .news-cards-2 a {
+        font-size: 10px;
+    }
+
+    .news-cards-2 p {
+        font-size: 10px;
+    }
+
+}
+
+
+
+/*================= FIN NOTICIAS DESTACADAS =================*/
+
+
+                    /*================= INICIO TAMBIÉN PUEDES VER =================*/
+
+
+.news-cards-3{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin: 10px 0;
+
+}
+
+.news-cards-3 img {
+    width: 100%;
+    height: 200px;
+    object-fit: scale-down;
+}
+
+.news-cards-3 h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.news-cards-3 a {
+    color: #359cb2;
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.news-cards-3 a:hover {
+    text-decoration: underline;
+    color: #0b7a8f;
+}
+
+
+@media screen and (max-width:800px){
+    .news-cards-3 img {
+
+        height: 120px;
+    }
+    
+    .news-cards-3 h3 {
+        font-size: 18px;
+    }
+    
+    .news-cards-3 a {
+        font-size: 13px;
+    }
+
+    .news-cards-3 p{
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width:500px){
+
+    .news-cards-3 img {
+
+        height: 50px;
+    }
+    
+    .news-cards-3 h3 {
+        font-size: 16px;
+    }
+    
+    .news-cards-3 a {
+        font-size: 12px;
+    }
+
+    .news-cards-3 p{
+        font-size: 12px;
+    }
+
+}
+
+
+@media screen and (max-width:400px){
+    .news-cards-3 img {
+
+        height: 50px;
+    }
+    
+    .news-cards-3 h3 {
+        font-size: 15px;
+    }
+    
+    .news-cards-3 a {
+        font-size: 11px;
+    }
+
+    .news-cards-3 p{
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width:300px){
+    .news-cards-3 img {
+
+        height: 50px;
+    }
+    
+    .news-cards-3 h3 {
+        font-size: 12px;
+    }
+    
+    .news-cards-3 a {
+        font-size: 9px;
+    }
+
+    .news-cards-3 p{
+        font-size: 9px;
+    }
+}
+
+
+
+
+/*================= FIN TAMBIÉN PUEDES VER =================*/
+
+                    /*================= INICIO FOOTER =================*/
+
+
+
+footer{
+    background: #fff;
+    height: auto;
+    width: auto;
+    font-family: sans-serif;
+    padding-top: 40px;
+    color: #000;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3{
+    font-size: 29px;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 48px;
+}
+
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.socials li{
+    margin: 0 10px;
+}
+
+.socials a{
+    text-decoration: none;
+    color: #000;
+}
+
+.socials a i{
+    font-size: 18px;
+}
+
+@media screen and (max-width:1200px){
+    .footer-content p{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:800px){
+    .footer-content p{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width:500px){
+    .footer-content p{
+        font-size: 15px;
+    }
+    .footer-content h3{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:400px){
+    .footer-content p{
+        font-size: 13px;
+    }
+    .footer-content h3{
+        font-size: 18px;
+    }
+}
+                    /*================= FIN FOOTER =================*/
+
+
+                    /* COLABORADOR */
+
+/* INICIO REGISTRO COLABORADOR */
+
+.imagen-fondo-2{
+    background: url(../img/vision.jpg)fixed center/cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 160vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-aporte{
+    width: 800px;
+    background: rgba(110, 110, 110, 0.493);
+    padding: 30px;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 4px;
+    color: #fff;
+    box-shadow: 0 0 10px rgb(104, 104, 104); 
+}
+
+.form-aporte h4{
+    font-size: 25px; 
+}
+
+.form-aporte-texto{
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.form-aporte-img{
+    font-size: 18px;
+    margin-top: -20px;
+}
+
+.form-aporte-texto-nombre{
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+
+
+.form-aporte hr{
+    margin-bottom: 15px;
+    
+}
+
+.form-aporte hr{
+    border: 0.1px solid;
+}
+
+.input-aporte{
+    width: 100%;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid rgb(168, 168, 168);
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-top: -3px;
+}
+
+.input-aporte:focus{
+    outline: none;
+}
+
+.form-opciones{
+    width: 100%;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid rgb(168, 168, 168);
+    font-size: 16px;
+    margin-top: -3px;
+}
+
+.form-file{
+    width: 740px;
+    border-radius: 4px;
+    border: 1px solid rgb(168, 168, 168);
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.form-botones-aporte{
+    width: 80%;
+    background: #359cb2;
+    border: none;
+    padding: 10px;
+    color: #fff;
+    margin: 20px 0;
+    margin-left: 72px;
+    margin-top: 30px;
+    font-size: 16px;
+    border-radius: 4px;
+}   
+
+.form-botones-aporte:hover{
+    background: #0b7a8f;
+} 
+
+
+.form-parrafo-aporte{
+    text-align: center;
+}   
+
+
+@media screen and (max-width:1200px){
+    .form-registro{
+        width: 800px;     
+    }
+
+    .form-registro h4{
+        font-size: 40px;
+    }
+
+    .input-container {
+        margin-bottom: 30px;
+    }
+
+    .icon {
+        padding: 20px;
+        font-size: 23px;
+        min-width: 70px;
+    }
+
+    .inputs{
+        font-size: 30px;
+    }
+
+    .form-registro p{
+        font-size: 30px;
+    }
+
+    .form-check-label{
+        font-size: 30px;
+        padding-left: 10px;
+    }
+
+    .form-check-input{
+        margin-right: 100px;
+        width: 20px;
+        height: 20px;
+        block-size: 30px;
+    }
+
+    .form-botones{
+        padding: 15px;
+        font-size: 27px;
+    }
+
+    /* Registro exitoso */
+
+    .form-registro-exitoso{
+        width: 800px;     
+    }
+
+    .form-registro-exitoso h4{
+        font-size: 40px;
+    }
+
+    .form-registro-exitoso p{
+        font-size: 30px;
+    }
+
+    /* aporte exitoso */
+
+    .form-aporte-exitoso{
+        width: 800px;     
+    }
+
+    .form-aporte-exitoso h4{
+        font-size: 40px;
+    }
+
+    .form-aporte-exitoso p{
+        font-size: 30px;
+    }
+
+    /* Responsividad aportes */
+
+    .form-aporte h4{
+        font-size: 45px;
+    }
+
+    .form-aporte p{
+        font-size: 30px;
+    }
+
+    .form-aporte hr{
+        border: 1px solid rgba(187, 187, 187, 0.575);
+    }
+
+    .input-aporte{
+        font-size: 27px;
+    }
+
+    .labelaportes{
+        font-size: 25px;
+    }
+
+    .form-opciones{
+        font-size: 25px;
+    }
+
+    .calendario{
+        font-size: 25px;
+    }
+
+    .form-file{
+        font-size: 25px;
+    }
+
+    .form-botones-aporte{
+        padding: 10px;
+        font-size: 25px;
+    }   
+    
+    .form-parrafo-aporte a{
+        font-size: 30px;
+    }   
+}
+
+@media screen and (max-width:800px){
+    .form-registro{
+        width: 600px;     
+    }
+    .form-check-input{
+        block-size: 40px;
+    }
+
+    /* Registro exitoso */
+
+    .form-registro-exitoso{
+        width: 700px;  
+        padding-top: 150px;   
+    }
+
+    /* aporte exitoso */
+    .form-aporte-exitoso{
+        width: 700px;  
+        padding-top: 200px;   
+    }
+
+    /* Responsividad aportes */
+
+    .form-aporte{
+        width: 600px;
+    }
+
+    .form-aporte h4{
+        font-size: 40px;
+    }
+
+    .form-aporte p{
+        font-size: 25px;
+    }
+
+    .form-aporte hr{
+        border: 1px solid rgba(187, 187, 187, 0.575);
+    }
+
+    .input-aporte{
+        font-size: 20px;
+    }
+
+    .labelaportes{
+        font-size: 25px;
+    }
+
+    .form-opciones{
+        font-size: 20px;
+    }
+
+    .calendario{
+        font-size: 20px;
+    }
+
+    .form-file{
+        font-size: 20px;
+        width: 100%;
+    }
+
+    .form-botones-aporte{
+        padding: 10px;
+        font-size: 25px;
+    }   
+    
+    .form-parrafo-aporte a{
+        font-size: 30px;
+    } 
+}
+
+@media screen and (max-width:600px){
+    .form-registro{
+        width: 450px;     
+    }
+
+    .form-registro h4{
+        font-size: 20px;
+    }
+
+    .input-container {
+        margin-bottom: 10px;
+    }
+
+    .icon {
+        padding: 15px;
+        font-size: 15px;
+        min-width: 15px;
+    }
+
+    .inputs{
+        font-size: 15px;
+    }
+
+    .form-registro p{
+        font-size: 15px;
+    }
+
+    .form-check-label{
+        font-size: 15px;
+        padding-left: 0px;
+        margin-top: 7px;
+    }
+
+    .form-check-input{
+        margin-right: 5px;
+        width: 13px;
+        height: 13px;
+        block-size: 25px;
+    }
+
+    .form-botones{
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    /* Registro exitoso */
+
+    .form-registro-exitoso{
+        width: 450px;
+        padding-top: 200px;     
+    }
+
+    .form-registro-exitoso h4{
+        font-size: 25px;
+    }
+
+    .form-registro-exitoso p{
+        font-size: 20px;
+    }
+
+    /* Aporte exitoso */
+
+    .form-aporte-exitoso{
+        width: 450px;
+        padding-top: 200px;     
+    }
+
+    .form-aporte-exitoso h4{
+        font-size: 25px;
+    }
+
+    .form-aporte-exitoso p{
+        font-size: 20px;
+    }
+
+    /* Responsividad aportes */
+
+    .imagen-fondo-2{
+        width: 105%;
+    }
+    .form-aporte{
+        width: 500x;
+    }
+    .form-aporte h4{
+        font-size: 25px;
+    }
+
+    .form-aporte p{
+        font-size: 20px;
+    }
+
+    .form-aporte hr{
+        border: 1px solid rgba(187, 187, 187, 0.575);
+    }
+
+    .input-aporte{
+        font-size: 15px;
+    }
+
+    .labelaportes{
+        font-size: 20px;
+    }
+
+    .form-opciones{
+        font-size: 15px;
+    }
+
+    .calendario{
+        font-size: 15px;
+    }
+
+    .form-file{
+        font-size: 15px;
+        width: 100%;
+    }
+
+    .form-botones-aporte{
+        padding: 5px;
+        font-size: 15x;
+    }   
+    
+    .form-parrafo-aporte a{
+        font-size: 20px;
+    } 
+}
+
+@media screen and (max-width:500px){
+    .form-registro{
+        width: 350px;     
+    }
+
+    .form-check-input{
+        block-size: 27px;
+    }
+
+    .input-container {
+        margin-bottom: 6px;
+    }
+
+    .form-registro p{
+        font-size: 15px;
+    }
+
+    /* Registro exitoso */
+
+    .form-registro-exitoso{
+        width: 350px;     
+    }
+
+    /* Aporte exitoso */
+
+    .form-aporte-exitoso{
+        width: 350px;     
+    }
+
+    /* Responsividad aportes */
+
+    .imagen-fondo-2{
+        width: 100%;
+    }
+
+    .form-aporte{
+        width: 400px;
+    }
+
+    .form-aporte h4{
+        font-size: 20px;
+    }
+
+    .form-aporte p{
+        font-size: 15px;
+    }
+
+    .form-aporte hr{
+        border: 1px solid rgba(187, 187, 187, 0.575);
+    }
+
+    .input-aporte{
+        font-size: 10px;
+    }
+
+    .labelaportes{
+        font-size: 15px;
+    }
+
+    .form-opciones{
+        font-size: 10px;
+    }
+
+    .calendario{
+        font-size: 10px;
+    }
+
+    .form-file{
+        font-size: 10px;
+        width: 100%;
+    }
+
+    .form-botones-aporte{
+        padding: 5px;
+        font-size: 15px;
+        margin-left: 35px;
+    }   
+    
+    .form-parrafo-aporte a{
+        font-size: 15px;
+    } 
+}
+
+@media screen and (max-width:400px){
+    .form-registro{
+        width: 300px;     
+    }
+    .input-container {
+        margin-bottom: 7px;
+    }
+
+    /* Registro exitoso */
+
+    .form-registro-exitoso{
+        width: 300px;     
+    }
+
+    /* Aporte exitoso */
+
+    .form-aporte-exitoso{
+        width: 300px;     
+    }
+
+    /* Responsividad aportes */
+
+    .imagen-fondo-2{
+        width: 100%;
+    }
+
+    .form-aporte{
+        width: 300px;
+    }
+
+    .form-aporte h4{
+        font-size: 20px;
+    }
+
+    .form-aporte p{
+        font-size: 13px;
+    }
+
+    .form-aporte hr{
+        border: 1px solid rgba(187, 187, 187, 0.575);
+    }
+
+    .input-aporte{
+        font-size: 10px;
+    }
+
+    .labelaportes{
+        font-size: 15px;
+    }
+
+    .form-opciones{
+        font-size: 10px;
+    }
+
+    .calendario{
+        font-size: 10px;
+    }
+
+    .form-file{
+        font-size: 10px;
+        width: 100%;
+    }
+
+    .form-botones-aporte{
+        padding: 5px;
+        font-size: 15px;
+        margin-left: 25px;
+    }   
+    
+    .form-parrafo-aporte a{
+        font-size: 13px;
+    } 
+}
+
+@media screen and (max-width:300px){
+    .form-registro{
+        width: 250px;  
+        margin-top: 50px;   
+    }
+
+    .icon {
+        padding: 15px;
+        font-size: 10px;
+        min-width: 15px;
+    }
+
+    .input-container {
+        margin-bottom: 7px;
+    }
+
+    .inputs{
+        font-size: 13px;
+    }
+
+    .form-check-input{
+        block-size: 28px;
+    }
+
+    .form-registro p{
+        font-size: 12px;
+    }
+
+    /* Registro exitoso */
+
+    .form-registro-exitoso{
+        width: 250px;  
+        margin-top: 50px;   
+    }
+
+    .form-registro-exitoso h4{
+        font-size: 20px;
+    }
+
+    .form-registro-exitoso p{
+        font-size: 15px;
+    }
+
+    /* Aporte exitoso */
+
+    .form-aporte-exitoso{
+        width: 250px;  
+        margin-top: 50px;   
+    }
+
+    .form-aporte-exitoso h4{
+        font-size: 20px;
+    }
+
+    .form-aporte-exitoso p{
+        font-size: 15px;
+    }
+
+    /* Respondividad aportes */
+
+    .imagen-fondo-2{
+        width: 105%;
+    }
+}
+
+
+
+
+
+
+
+
+  
